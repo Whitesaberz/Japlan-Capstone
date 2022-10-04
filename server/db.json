@@ -8,7 +8,7 @@
     {
       "id": 2,
       "place": "Nagasaki",
-      "rating": 5,
+      "rating": "type=radio",
       "imageURL" : "https://top.his-usa.com/destination-japan/up_img/cke/imgs/2016713/shutterstock_290048120.jpg"
     },
     {

@@ -16,19 +16,19 @@ function submitHandler(e) {
     e.preventDefault()
 
     let place = document.querySelector('#place')
-    let rating = document.querySelector('#rating')
+    let rating = document.querySelector('.stars');
     let imageURL = document.querySelector('#img')
 
     let bodyObj = {
         place: place.value,
-        rating: rating, 
+        rating: rating.value, 
         imageURL: imageURL.value
     }
 
     createLocation(bodyObj)
 
     place.value = ''
-    rating = ''
+    rating.value = ''
     imageURL.value = ''
 }
 
