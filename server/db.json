@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "place": "Okinawa",
+      "rating": 5,
+      "imageURL" : "https://a.cdn-hotels.com/gdcs/production127/d88/a5e3756e-e17b-4f77-a7e7-a938dec22e8d.jpg?impolicy=fcrop&w=800&h=533&q=medium"
+    },
+    {
+      "id": 2,
+      "place": "Nagasaki",
+      "rating": 5,
+      "imageURL" : "https://top.his-usa.com/destination-japan/up_img/cke/imgs/2016713/shutterstock_290048120.jpg"
+    },
+    {
+      "id": 3,
+      "place": "Osaka",
+      "rating": 5,
+      "imageURL" : "https://sandinmysuitcase.com/wp-content/uploads/2020/11/Japan-Osaka.jpg.webp"
+    },
+    {
+      "id": 4,
+      "place": "Hokkaido",
+      "rating": 5,
+      "imageURL" : "https://us.jnto.go.jp/hokkaido/imgs/page5.jpg"
+    }
+
+  ]
