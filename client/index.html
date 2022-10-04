@@ -4,21 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Japlan</title>
+    <title>Japlan!</title>
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
-      <h1>Japlan</h1>
+      <h1>Japlan!</h1>
     </header>
     <main>
-
+      <div>
       <form id="add-location">
         <input 
             type='text'
             id="place"
             placeholder="Where would you like to go?"/>
+        <input 
+            type='text'
+            id="description"
+            placeholder="What could you do there?"/>
+        <input 
+            type='text'
+            id="time"
+            placeholder="For how long?(days)"/>
             <div class="stars">
               <form action="">
                 <input class="star star-5" id="star-5-add" type="radio" name="star"/>
@@ -36,10 +44,10 @@
                   type='text'
                   id="img"
                   placeholder='Paste an image URL'/>
-              <button id="add-location-btn">Add new location!</button>
-            </div>
-      </form>
-
+                  <button id="add-location-btn">Add new location!</button>
+                </div>
+          </form>
+          <button id="see-suggestions">See our suggestions!</button>
       <section id = "locations-container"></section>
 
     </main>

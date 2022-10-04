@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 
 const app = express();
 
@@ -13,13 +14,13 @@ const {
     updateLocation,
   } = require("./controller");
   
-//Endpoints
+app.use("/", express.static(path.join(__dirname, "./client/index.html")));
+app.use(express.static(path.join(__dirname, "./client")));
 
 app.get("/api/locations", getLocations);
 app.delete("/api/locations/:id", deleteLocation);
 app.post("/api/locations", createLocation);
 app.put("/api/locations/:id", updateLocation);
 
-//
-
-app.listen(4040, () => console.log("Checking in at port 4040"));
+const port = process.PORT || 4000;
+app.listen(port, () => console.log(`Checking in at port ${port}`));

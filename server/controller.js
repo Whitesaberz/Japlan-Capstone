@@ -1,7 +1,5 @@
 const locations = require("./db.json");
-let globalId = 5;
-
-//Get, Put, Delete, Push points
+let globalId = 13;
 
 module.exports = {
     getLocations: (req, res) => {
@@ -13,10 +11,12 @@ module.exports = {
         res.status(200).send(locations);
       },
       createLocation: (req, res) => {
-        const { place, rating, imageURL } = req.body;
+        const { place, description, time, rating, imageURL } = req.body;
         let newLocation = {
           id: globalId,
           place,
+          description,
+          time: +time,
           rating,
           imageURL,
         };
@@ -29,5 +29,14 @@ module.exports = {
         const { type } = req.body;
         let index = locations.findIndex((elem) => +elem.id === +id);
         console.log(type);
+        if (type === "minus" && locations[index].time > 1) {
+          locations[index].time--;
+          res.status(200).send(locations);
+        } else if (type === "plus" && locations[index].time < 31) {
+          locations[index].time++;
+          res.status(200).send(locations);
+        } else {
+          res.status(400).send("Error");
+        }
         }
       }
