@@ -1,4 +1,4 @@
-const baseURL = `http://localhost:4000/api/locations`;
+const baseURL = `https://japlan.herokuapp.com`;
 
 const locationsContainer = document.querySelector('#locations-container')
 const form = document.querySelector('form')
