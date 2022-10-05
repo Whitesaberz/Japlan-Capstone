@@ -7,6 +7,16 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
+var Rollbar = require("rollbar");
+var rollbar = new Rollbar({
+  accessToken: 'ad43f6c9c2c84d449bbf144e3c4f3d4c',
+  captureUncaught: true,
+  captureUnhandledRejections: true
+});
+
+rollbar.log("Hello world!");
+
 const {
     getLocations,
     deleteLocation,
