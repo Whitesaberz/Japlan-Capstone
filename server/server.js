@@ -26,8 +26,10 @@ const {
   
 app.use("/", express.static(path.join(__dirname, "../client/index.html")));
 app.use(express.static(path.join(__dirname, "../client")));
-app.use(express.static(path.join(__dirname, "../server")));
 
+app.get('/js', (req, res) =>{
+  res.sendFile(path.join(__dirname, '../client/index.js'))
+})
 
 app.get("/api/locations", getLocations);
 app.delete("/api/locations/:id", deleteLocation);
