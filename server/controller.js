@@ -22,7 +22,8 @@ module.exports = {
         };
         locations.push(newLocation);
         globalId++;
-        res.status(200).send(locations);
+        res.status(200).send(locations)
+        rollbar.info("User successfully created new location");
       },
       updateLocationTime: (req, res) => {
         const { id } = req.params;
@@ -37,6 +38,7 @@ module.exports = {
           res.status(200).send(locations);
         } else {
           res.status(400).send("Error");
+          rollbar.error("Issue with updating time");
         }
         }
       }
