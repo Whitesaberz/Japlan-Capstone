@@ -17,14 +17,14 @@ module.exports = {
           place,
           description,
           time: +time,
-          rating,
+          rating: +rating,
           imageURL,
         };
         locations.push(newLocation);
         globalId++;
         res.status(200).send(locations);
       },
-      updateLocation: (req, res) => {
+      updateLocationTime: (req, res) => {
         const { id } = req.params;
         const { type } = req.body;
         let index = locations.findIndex((elem) => +elem.id === +id);

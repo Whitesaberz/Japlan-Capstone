@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Japlan!</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Nunito">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
+      <nav>
+        <a href="./index.html">Home</a>
+        <a href="./culture.html">Cultural Cares</a>
+      </nav>
       <h1>Japlan!</h1>
+      <span>Get ideas for a trip to 日本</span>
     </header>
     <main>
-      <div>
+        <div id="flag">
       <form id="add-location">
         <input 
             type='text'
@@ -27,32 +34,23 @@
             type='text'
             id="time"
             placeholder="For how long?(days)"/>
-            <div class="stars">
-              <form action="">
-                <input class="star star-5" id="star-5-add" type="radio" name="star"/>
-                <label class="star star-5" for="star-5-add"></label>
-                <input class="star star-4" id="star-4-add" type="radio" name="star"/>
-                <label class="star star-4" for="star-4-add"></label>
-                <input class="star star-3" id="star-3-add" type="radio" name="star"/>
-                <label class="star star-3" for="star-3-add"></label>
-                <input class="star star-2" id="star-2-add" type="radio" name="star"/>
-                <label class="star star-2" for="star-2-add"></label>
-                <input class="star star-1" id="star-1-add" type="radio" name="star"/>
-                <label class="star star-1" for="star-1-add"></label>
-              </form>
               <input 
                   type='text'
                   id="img"
                   placeholder='Paste an image URL'/>
-                  <button id="add-location-btn">Add new location!</button>
+                  <button id="add-location-btn">Add location!</button>
                 </div>
           </form>
-          <button id="see-suggestions">See our suggestions!</button>
-      <section id = "locations-container"></section>
-
-    </main>
-
+          
+          <div><button id="see-suggestions">Get some ideas!</button></div>
+          <section id = "locations-container"></section>
+        </main>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
   </body>
+  <footer><div class="ocean" id="footer">
+    <div class="wave"></div>
+    <div class="wave"></div>
+    <div class="wave"></div>
+  </div></footer>
 </html>
